@@ -27,38 +27,38 @@
 
 .tooltip-container .tooltip-arrow {
 	position: absolute;
-	border-width: 5px;
+	border-width: 7px;
 	border-style: solid;
 }
 
 .tooltip-container.arrow-b .tooltip-arrow {
-	top: -10px;
+	top: -14px;
 	left: 50%;
-	margin-left: -5px;
+	margin-left: -7px;
 	border-color: transparent transparent #222 transparent;
 	border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent;
 }
 
 .tooltip-container.arrow-t .tooltip-arrow {
-	bottom: -10px;
+	bottom: -14px;
 	left: 50%;
-	margin-left: -5px;
+	margin-left: -7px;
 	border-color: #222 transparent transparent transparent;
 	border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
 }
 
 .tooltip-container.arrow-l .tooltip-arrow {
 	top: 50%;
-	right: -10px;
-	margin-top: -5px;
+	right: -14px;
+	margin-top: -7px;
 	border-color: transparent transparent transparent #222;
 	border-color: transparent transparent transparent rgba(0, 0, 0, 0.85);
 }
 
 .tooltip-container.arrow-r .tooltip-arrow {
 	top: 50%;
-	left: -10px;
-	margin-top: -5px;
+	left: -14px;
+	margin-top: -7px;
 	border-color: transparent #222 transparent transparent;
 	border-color: transparent rgba(0, 0, 0, 0.85) transparent transparent;
 }
@@ -67,5 +67,4 @@
 	color: #fff;
 	text-shadow: 0 1px 0 #000;
 	padding: 8px 16px;
-	font-size: 12px;
 }

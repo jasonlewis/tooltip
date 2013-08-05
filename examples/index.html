@@ -8,13 +8,13 @@
 		</title>
 
 		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="../src/tooltip.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="../src/tooltip.css" />
+		<script src="../tooltip.js"></script>
+		<link rel="stylesheet" type="text/css" href="../tooltip.css" />
 
 		<style type="text/css">
 			body {
 				font-family: Arial, Verdana, Tahoma;
-				font-size: 12px;
+				font-size: 12pt;
 				color: #444;
 				margin: 5% 20%;
 			}
@@ -81,12 +81,7 @@
 				{
 					example++;
 
-					$(this).prev().append('<span class="tooltip-live" title="Example #' + example + '">Example #' + example + '</span><br />');
-				});
-
-				// Assign a tooltip to attach to elements dynamically added.
-				$('.tooltip-live').tooltip({
-					live: true
+					$(this).prev().append('<span class="tooltip" title="Example #' + example + '">Example #' + example + '</span><br />');
 				});
 
 			});
@@ -109,11 +104,15 @@
 		</ol>
 
 		<p>
-			As well as positioning you can set it to attach to elements added to the DOM by jQuery. Check it out...
+			You can also <span class="tooltip-b" title="This tooltip has <strong>HTML</strong> <em>embedded</em>.">embed HTML</span> within a tooltip.
 		</p>
 
 		<p>
-			<span class="tooltip-live" title="Example #1">Example #1</span><br />
+			Dynamically generated elements can also have tooltips attached.
+		</p>
+
+		<p>
+			<span class="tooltip" title="Example #1">Example #1</span><br />
 		</p>
 
 		<h4>Add another example!</h4>

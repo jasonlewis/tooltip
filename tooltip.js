@@ -7,7 +7,7 @@
  * @author		Jason Lewis
  * @copyright	2011 - 2013 Jason Lewis
  * @version		1.0.1
- * @license 	3-clause BSD
+ * @license 	2-clause BSD
  */
 (function($)
 {
@@ -23,20 +23,18 @@
 			},
 			title = '';
 
-		// Append the tooltip contents to the body
 		$('body').append(elements.container.html(elements.wrapper.html(elements.arrow).append(elements.content)));
 
-		// Set some options
 		elements.container.css({ maxWidth: options.width + 'px' });
 
-		return $('body').on('mouseover', this.selector, function()
+		$('body').on('mouseover', this.selector, function()
 		{
 			var elm = $(this);
 			title = elm.attr(options.attr);
 
 			if (title.length > 0)
 			{
-				elements.content.text(title);
+				elements.content.html(title);
 				elm.attr(options.attr, '');
 
 				var dimensions = {
@@ -53,7 +51,6 @@
 					},
 					offsets = {};
 
-				// Determine the position.
 				switch (options.position.charAt(0))
 				{
 					case 'b':
