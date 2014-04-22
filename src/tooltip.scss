@@ -1,0 +1,60 @@
+$tooltip-arrow-size: 7px !default;
+$tooltip-background-color: rgba(0, 0, 0, 0.85) !default;
+$tooltip-shadow-color: #000 !default;
+$tooltip-text-color: #fff !default;
+
+.tooltip-container {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 2px;
+	line-height: normal !important;
+	box-sizing: border-box;
+	background: $tooltip-background-color;
+	z-index: 99;
+
+	.tooltip-wrapper {
+		position: relative;
+
+		.tooltip-arrow {
+			position: absolute;
+			border-width: $tooltip-arrow-size;
+			border-style: solid;
+		}
+
+		.tooltip-content {
+			color: $tooltip-text-color;
+			text-shadow: 0 1px 0 $tooltip-shadow-color;
+			padding: 8px 16px;
+		}
+	}
+
+	&.arrow-bottom .tooltip-arrow {
+		top: -($tooltip-arrow-size * 2);
+		left: 50%;
+		margin-left: -($tooltip-arrow-size);
+		border-color: transparent transparent $tooltip-background-color transparent;
+	}
+
+	&.arrow-top .tooltip-arrow {
+		bottom: -($tooltip-arrow-size * 2);
+		left: 50%;
+		margin-left: -($tooltip-arrow-size);
+		border-color: $tooltip-background-color transparent transparent transparent;
+	}
+
+	&.arrow-left .tooltip-arrow {
+		top: 50%;
+		right: -($tooltip-arrow-size * 2);
+		margin-top: -($tooltip-arrow-size);
+		border-color: transparent transparent transparent $tooltip-background-color;
+	}
+
+	&.arrow-right .tooltip-arrow {
+		top: 50%;
+		left: -($tooltip-arrow-size * 2);
+		margin-top: -($tooltip-arrow-size);
+		border-color: transparent $tooltip-background-color transparent transparent;
+	}
+}

@@ -1,0 +1,40 @@
+.tooltip-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  line-height: normal !important;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 99; }
+  .tooltip-container .tooltip-wrapper {
+    position: relative; }
+    .tooltip-container .tooltip-wrapper .tooltip-arrow {
+      position: absolute;
+      border-width: 7px;
+      border-style: solid; }
+    .tooltip-container .tooltip-wrapper .tooltip-content {
+      color: white;
+      text-shadow: 0 1px 0 black;
+      padding: 8px 16px; }
+  .tooltip-container.arrow-bottom .tooltip-arrow {
+    top: -14px;
+    left: 50%;
+    margin-left: -7px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent; }
+  .tooltip-container.arrow-top .tooltip-arrow {
+    bottom: -14px;
+    left: 50%;
+    margin-left: -7px;
+    border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent; }
+  .tooltip-container.arrow-left .tooltip-arrow {
+    top: 50%;
+    right: -14px;
+    margin-top: -7px;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.85); }
+  .tooltip-container.arrow-right .tooltip-arrow {
+    top: 50%;
+    left: -14px;
+    margin-top: -7px;
+    border-color: transparent rgba(0, 0, 0, 0.85) transparent transparent; }

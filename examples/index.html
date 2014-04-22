@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
-
 	<head>
 		<title>
-			Tooltip for jQuery Examples
+			Tooltip Examples
 		</title>
 
-		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="../tooltip.js"></script>
-		<link rel="stylesheet" type="text/css" href="../tooltip.css" />
+		<script src="../src/tooltip.js"></script>
+		<link rel="stylesheet" type="text/css" href="../dist/tooltip.css" />
 
 		<style type="text/css">
 			body {
@@ -30,92 +27,68 @@
 				cursor: pointer;
 			}
 		</style>
-
-		<script type="text/javascript">
-			$(document).ready(function()
-			{
-
-				// Assign a tooltip to all standard tooltip elements.
-				$('.tooltip').tooltip();
-
-				// Assign a tooltip to be positioned at the top left.
-				$('.tooltip-tl').tooltip({
-					position: 'topLeft' 
-				});
-
-				// Assign a tooltip to be positioned at the top right.
-				$('.tooltip-tr').tooltip({
-					position: 'topRight' 
-				});
-
-				// Assign a tooltip to be positioned at the right.
-				$('.tooltip-r').tooltip({
-					position: 'right' 
-				});
-
-				// Assign a tooltip to be positioned at the left.
-				$('.tooltip-l').tooltip({
-					position: 'left' 
-				});
-
-				// Assign a tooltip to be positioned at the bottom left.
-				$('.tooltip-bl').tooltip({
-					position: 'bottomLeft' 
-				});
-
-				// Assign a tooltip to be positioned at the bottom right.
-				$('.tooltip-br').tooltip({
-					position: 'bottomRight' 
-				});
-
-				// Assign a tooltip to be positioned at the bottom.
-				$('.tooltip-b').tooltip({
-					position: 'bottom' 
-				});
-
-				// Bind the click event to the H4 element so we can dynamically add examples
-				// which still receive tooltips.
-				var example = 1;
-
-				$('h4').on('click', function()
-				{
-					example++;
-
-					$(this).prev().append('<span class="tooltip" title="Example #' + example + '">Example #' + example + '</span><br />');
-				});
-
-			});
-		</script>
 	</head>
 
 	<body>
 
-		<span class="tooltip" title="Yes, this is a tooltip!">Tooltip</span> is a very simple yet elegant tooltip plugin for <span class="tooltip" title="jQuery really is awesome.">jQuery</span>. You can attach tooltips to anything using the power of jQuery. Tooltips can also be customized to show at different positions of the element.
+		<span class="tooltip" data-title="Yes, this is a tooltip!">Tooltip</span> is a standalone JavaScript library. You can attach tooltips to pretty much anything. Tooltips can also be customized to show at different positions of the element.
 
 		<ol>
-			<li><span class="tooltip" title="This tooltip is positioned at the top.">Top (default behaviour)</span></li>
-			<li><span class="tooltip-tl" title="This tooltip is positioned at the top left.">Top Left</span></li>
-			<li><span class="tooltip-tr" title="This tooltip is positioned at the top right.">Top Right</span></li>
-			<li><span class="tooltip-r" title="This tooltip is positioned at the right.">Right</span></li>
-			<li><span class="tooltip-l" title="This tooltip is positioned at the left.">Left</span></li>
-			<li><span class="tooltip-bl" title="This tooltip is positioned at the bottom left.">Bottom Left</span></li>
-			<li><span class="tooltip-br" title="This tooltip is positioned at the bottom right.">Bottom Right</span></li>
-			<li><span class="tooltip-b" title="This tooltip is positioned at the bottom.">Bottom</span></li>
+			<li><span class="tooltip" data-title="This tooltip is positioned at the top.">Top (default behaviour)</span></li>
+			<li><span class="tooltip-tl" data-title="This tooltip is positioned at the top left.">Top Left</span></li>
+			<li><span class="tooltip-tr" data-title="This tooltip is positioned at the top right.">Top Right</span></li>
+			<li><span class="tooltip-r" data-title="This tooltip is positioned at the right.">Right</span></li>
+			<li><span class="tooltip-l" data-title="This tooltip is positioned at the left.">Left</span></li>
+			<li><span class="tooltip-bl" data-title="This tooltip is positioned at the bottom left.">Bottom Left</span></li>
+			<li><span class="tooltip-br" data-title="This tooltip is positioned at the bottom right.">Bottom Right</span></li>
+			<li><span class="tooltip-b" data-title="This tooltip is positioned at the bottom.">Bottom</span></li>
 		</ol>
 
 		<p>
-			You can also <span class="tooltip-b" title="This tooltip has <strong>HTML</strong> <em>embedded</em>.">embed HTML</span> within a tooltip.
+			You can also <span class="tooltip-b" data-title="This tooltip has <strong>HTML</strong> <em>embedded</em>.">embed HTML</span> within a tooltip.
 		</p>
 
-		<p>
-			Dynamically generated elements can also have tooltips attached.
-		</p>
+		<script type="text/javascript">
+			
+			// Assign a tooltip to all standard tooltip elements.
+			Tooltip.new('.tooltip');
 
-		<p>
-			<span class="tooltip" title="Example #1">Example #1</span><br />
-		</p>
+			// Assign a tooltip to be positioned at the top left.
+			Tooltip.new('.tooltip-tl', {
+				position: 'topLeft'
+			});
 
-		<h4>Add another example!</h4>
+			// Assign a tooltip to be positioned at the top right.
+			Tooltip.new('.tooltip-tr', {
+				position: 'topRight'
+			});
+
+			// Assign a tooltip to be positioned at the right.
+			Tooltip.new('.tooltip-r', {
+				position: 'right' 
+			});
+
+			// Assign a tooltip to be positioned at the left.
+			Tooltip.new('.tooltip-l', {
+				position: 'left' 
+			});
+
+			// Assign a tooltip to be positioned at the bottom left.
+			Tooltip.new('.tooltip-bl', {
+				position: 'bottomLeft' 
+			});
+
+			// Assign a tooltip to be positioned at the bottom right.
+			Tooltip.new('.tooltip-br', {
+				position: 'bottomRight' 
+			});
+
+			// Assign a tooltip to be positioned at the bottom.
+			Tooltip.new('.tooltip-b', {
+				position: 'bottom'
+			});
+		</script>
+
 	</body>
 
 </html>
