@@ -1,0 +1,19 @@
+{
+	"name": "tooltip",
+	"version": "2.0.0",
+	"homepage": "https://github.com/jasonlewis/tooltip",
+	"authors": [
+		"Jason Lewis <jason.lewis1991@gmail.com>"
+	],
+	"keywords": [
+		"tooltip"
+	],
+	"license": "BSD-2-Clause",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
