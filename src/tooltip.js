@@ -157,6 +157,17 @@ window.Tooltip = (function()
 		return options;
 	}
 
+	Tooltip.prototype.unbind = function()
+	{
+		var clone;
+
+		for (var i = 0; i < this.targets.length; i++)
+		{
+			clone = this.targets[i].cloneNode(true);
+			this.targets[i].parentNode.replaceChild(clone, this.targets[i]);
+		}
+	}
+
 	return {
 		new: function(targets, options)
 		{
